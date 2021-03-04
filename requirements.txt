@@ -1,0 +1,12 @@
+Flask
+SQLAlchemy
+Flask-SQLAlchemy
+flake8
+pytest
+psycopg2
+marshmallow
+marshmallow-sqlalchemy
+marshmallow-enum
+black
+isort
+pyjwt

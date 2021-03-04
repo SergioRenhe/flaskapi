@@ -1,0 +1,30 @@
+version: '3'
+
+volumes:
+  db:
+
+services:
+  app:
+    build: .
+    command: flask run --host 0.0.0.0 --port 5000
+    container_name: app
+    environment:
+      FLASK_APP: "src.main"
+      FLASK_ENV: "development"
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    restart: always
+    container_name: db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db:/var/lib/postgresql/data/
