@@ -2,9 +2,7 @@
 
 Project to be developed for Indiana challenge.
 
-============
-Running
-============
+## Running
 
 Run the following command at the project root:
 
@@ -12,10 +10,8 @@ Run the following command at the project root:
 
 You should see everything being set up automatically, with an API being exposed at this address: http://localhost:5000.
 
+## Testing
 
-============
-Testing
-============
 In order to run automated tests, cd to src/ folder:
 
     ``cd src``
